@@ -103,7 +103,7 @@ public class PeriodsControllerImpl extends PeriodsControllerPOA {
             org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
             //Obtem referencia para o servidor
-            return PeriodPersistenceHelper.narrow(ncRef.resolve_str("TagsPersistence"));
+            return PeriodPersistenceHelper.narrow(ncRef.resolve_str("PeriodsPersistence"));
         } catch (Exception e) {
             e.printStackTrace();
         }

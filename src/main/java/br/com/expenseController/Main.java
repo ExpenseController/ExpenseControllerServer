@@ -67,9 +67,9 @@ public class Main {
             ncRef.rebind(path, href);
             
             // Cria a implementação e registra no ORB
-            PeriodsControllerPOA produtoImpl = new PeriodsControllerImpl();
+            PeriodsControllerPOA periodsControllerPOA = new PeriodsControllerImpl();
             // Pega a referência do servidor
-            ref = rootpoa.servant_to_reference(produtoImpl);
+            ref = rootpoa.servant_to_reference(periodsControllerPOA);
             PeriodController produtoHref = PeriodControllerHelper.narrow(ref);
             // Registra o servidor no servico de nomes
             path = ncRef.to_name("PeriodsController");
